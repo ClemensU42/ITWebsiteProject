@@ -20,4 +20,13 @@ body{
     flex: 1;
     font-size: 14vh;
     font-family: 'Press Start 2P', cursive;
+    animation-name: title-letter-anim;
+    animation-iteration-count: 1;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+}
+
+@keyframes title-letter-anim {
+    from {opacity: 0; transform: translateY(-100%);}
+    to {opacity: 1; transform: translateY(0);}
 }

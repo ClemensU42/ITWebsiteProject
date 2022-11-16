@@ -1,5 +1,8 @@
 <?php
 $main_title_str = "INFORMATIK";
+$main_title_colors = [
+	"#32B9FF", "#45BFE8", "#57C5D1", "#6ACBB9", "#7DD1A2", "#8FD78B", "#A2DE74", "#B4E45D", "#C7EA46", "#DAF02E", "#ECF617", "#FFFC00"
+]
 ?>
 
 <!DOCTYPE html>
@@ -24,10 +27,14 @@ $main_title_str = "INFORMATIK";
 		<div class="main-title">
 			<div class="letter-container">
 				<?php
+					$i = 0;
 					foreach(mb_str_split($main_title_str) as $letter){
 						?>
-							<p><?php echo $letter; ?></p>
+							<p style=
+							"color: <?php echo $main_title_colors[$i];?>;
+							animation-delay: <?php echo $i * 0.1 ?>s;"><?php echo $letter; ?></p>
 						<?php
+						$i++;
 					}
 				?>
 			</div>
