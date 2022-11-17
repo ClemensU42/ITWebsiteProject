@@ -17,6 +17,10 @@ $main_title_colors = [
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<script src="js/particles.js"></script>
+<script src="js/index.js"></script>
+
 	<title>Informatik</title>
 </head>
 <body>
@@ -24,6 +28,7 @@ $main_title_colors = [
 
 	</div>
 	<div class="content">
+	<div class="particle-container" id="particles-js"></div>
 		<div class="main-title">
 			<div class="letter-container">
 				<?php
