@@ -40,3 +40,63 @@ body{
     top: 5vh;
     background-color: #111;
 }
+
+.practice-card-container{
+    position: absolute;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    max-width: 100%;
+    top: 55vh;
+}
+
+.practice-card{
+    width: 500px;
+    max-width: 500px;
+    height: 400px;
+    max-height: 400px;
+    margin: 50px 0 50px 0;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+    background-color: #333;
+    animation-name: practice-card-animation;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+}
+
+.practice-card > iframe{
+    width: 490px;
+    height: 390px;
+    margin: 5px;
+    border: none;
+}
+
+.practice-card > p{
+    font-size: 3vh;
+    transform: translateY(-450px) translateX(20px);
+    opacity: 0;
+    color: white;
+    transition-duration: 0.25s;
+}
+
+.practice-card:hover > p{
+    transform: translateY(-500px) translateX(20px);
+    opacity: 1;
+}
+
+.practice-card-cover{
+    width: 500px;
+    height: 400px;
+    transform: translateY(-400px);
+    background-image: linear-gradient(transparent, 20%, rgb(20, 20, 20));
+    opacity: 0;
+    transition-duration: 0.25s;
+}
+
+.practice-card:hover .practice-card-cover{
+    opacity: 1;
+}
+
+@keyframes practice-card-animation {
+    from {opacity: 0; transform: translateY(100%);}
+    to {opacity: 1; transform: translateY(0);}
+}
